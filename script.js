@@ -1,24 +1,42 @@
 const blue = document.getElementById("blue");
-let bluey = 0;
-let bluex = 0;
+let y = 0;
+let x = 0;
+let width = 100;
+let height = 100;
 
 window.addEventListener('keydown', (e) => {
     switch (e.code) {
-        case 'ArrowUp':
-            bluey += 10;
-            blue.style.bottom = `${bluey}px`;
+        case 'KeyW':
+            y += 10;
+            blue.style.bottom = `${y}px`;
+            break;
+        case 'KeyS':
+            y -= 10;
+            blue.style.bottom = `${y}px`;
+            break;
+        case 'KeyA':
+            x -= 10;
+            blue.style.left = `${x}px`;
+            break;
+        case 'KeyD':
+            x += 10;
+            blue.style.left = `${x}px`;
             break;
         case 'ArrowDown':
-            bluey -= 10;
-            blue.style.bottom = `${bluey}px`;
+            height += 10;
+            blue.style.height = `${height}px`;
             break;
-        case 'ArrowLeft':
-            bluex -= 10;
-            blue.style.left = `${bluex}px`;
+        case 'ArrowUp':
+            height -= 10;
+            blue.style.height = `${height}px`;
             break;
         case 'ArrowRight':
-            bluex += 10;
-            blue.style.left = `${bluex}px`;
+            width += 10;
+            blue.style.width = `${width}px`;
+            break;
+        case 'ArrowLeft':
+            width -= 10;
+            blue.style.width = `${width}px`;
             break;
     }
 });
