@@ -1,0 +1,11 @@
+#blue {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    position: relative;
+    transition: top 0.1s, bottom 0.1s, left 0.1s, right 0.1s;
+}
+
+body {
+    margin: 20px
+}
